@@ -10,12 +10,28 @@ body,
 body {
   background-color: #eccfdf;
 }
+.sirivennela-regular {
+  font-family: "Sirivennela", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.shrikhand-regular {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.twinkle-star-regular {
+  font-family: "Twinkle Star", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 .head {
+  font-family: "Sirivennela", sans-serif;
   text-align: center;
   padding: 20px;
   font-size: 90px;
-  color: #683c19;
-  text-shadow: #e9c290 3px 3px 5px;
+  color: #86562e;
+  text-shadow: #fff1f1 3px 3px 5px;
   margin: 15px;
 }
 .card {
@@ -64,6 +80,58 @@ body {
   justify-content: space-around;
   padding: 10px;
   margin: auto;
+}
+.filter-buttons-again {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 10px;
+  margin: auto;
+}
+.lizzy-grant {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-left: auto;
+  text-align: center;
+}
+.lana-rey {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.lana-del-ray {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.lana-del-rey {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-right: auto;
+  text-align: center;
+}
+.twenty-nine-plus {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-left: auto;
+  text-align: center;
+}
+.twenty-ten {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+}
+.twenty-eleven {
+  font-family: "Twinkle Star", cursive;
+  font-size: 39px;
+  margin-right: auto;
+  text-align: center;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
