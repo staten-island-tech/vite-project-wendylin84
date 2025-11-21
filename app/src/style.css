@@ -88,50 +88,175 @@ body {
   padding: 10px;
   margin: auto;
 }
+
 .lizzy-grant {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
   margin-left: auto;
+  overflow-y: hidden;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
   text-align: center;
+  padding: 17px 48px;
+  color: #ffffff;
+  background-color: #abddbd;
+  height: 48px;
+  :hover {
+    transform: scale(1.04);
+    background-color: #21e065;
+  }
 }
 .lana-rey {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
   margin-left: 10px;
   margin-right: 10px;
+  overflow-y: hidden;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
   text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #abddbd;
+  height: 48px;
+  :hover {
+    transform: scale(1.04);
+    background-color: #21e065;
+  }
 }
 .lana-del-ray {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
   margin-left: 10px;
   margin-right: 10px;
+  overflow-y: hidden;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
   text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #abddbd;
+  height: 48px;
+  :hover {
+    transform: scale(1.04);
+    background-color: #21e065;
+  }
 }
 .lana-del-rey {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
   margin-right: auto;
+  overflow-y: hidden;
+  display: inline-block;
+  outline: none;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  border-radius: 500px;
+  transition-property: background-color, border-color, color, box-shadow, filter;
+  transition-duration: 0.3s;
+  border: 1px solid transparent;
+  letter-spacing: 2px;
+  min-width: 160px;
+  text-transform: uppercase;
+  white-space: normal;
+  font-weight: 700;
   text-align: center;
+  padding: 17px 48px;
+  color: #fff;
+  background-color: #abddbd;
+  height: 48px;
+  :hover {
+    transform: scale(1.04);
+    background-color: #21e065;
+  }
 }
 .twenty-nine-plus {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
+  font-size: 30px;
   margin-left: auto;
   text-align: center;
+
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: rgb(214, 159, 207);
+  border: 1px solid rgb(133, 94, 63);
+  line-height: 26px;
 }
 .twenty-ten {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
+  font-size: 30px;
+  text-align: center;
+
   margin-left: 10px;
   margin-right: 10px;
-  text-align: center;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: rgb(231, 229, 203);
+  border: 1px solid rgb(133, 94, 63);
+  line-height: 26px;
 }
 .twenty-eleven {
   font-family: "Twinkle Star", cursive;
-  font-size: 39px;
+  font-size: 30px;
   margin-right: auto;
   text-align: center;
+
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: rgb(179, 132, 89);
+  border: 1px solid rgb(133, 94, 63);
+  line-height: 26px;
 }
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
