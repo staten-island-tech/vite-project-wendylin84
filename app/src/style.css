@@ -7,6 +7,15 @@ body,
   font-size: 30px;
   overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+:root {
+  --mint-color: #abdddb;
+  --strawberry-color: #d69fcf;
+  --vanilla-color: #e7e5cb;
+  --chocolate-color: #b38459;
+  --border-color: #855e3f;
+  --button-bg: #fff;
+  --head-color: #86562e;
+}
 body {
   background-color: #eccfdf;
 }
@@ -30,25 +39,25 @@ body {
   text-align: center;
   padding: 20px;
   font-size: 90px;
-  color: #86562e;
+  color: var(--head-color);
   text-shadow: #fff1f1 3px 3px 5px;
   margin: 15px;
 }
 .card {
   width: 20vw;
   height: 400px;
-  background-color: #e2e2e4;
+  background-color: #ffffff;
   margin: 15px auto;
   border-radius: 20px;
-  border: 3px solid #7e8685;
+  border: 3px solid #d1b6db;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow: #2d353d 10px 10px 20px;
   flex-wrap: wrap;
   transition: 0.3s;
+  box-shadow: 10px 8px 0px rgb(255, 236, 253);
 }
 .container {
   width: 100vw;
@@ -110,7 +119,7 @@ body {
   text-align: center;
   padding: 17px 48px;
   color: #ffffff;
-  background-color: #abddbd;
+  background-color: var(--mint-color);
   height: 48px;
   :hover {
     transform: scale(1.04);
@@ -139,7 +148,7 @@ body {
   text-align: center;
   padding: 17px 48px;
   color: #fff;
-  background-color: #abddbd;
+  background-color: var(--mint-color);
   height: 48px;
   :hover {
     transform: scale(1.04);
@@ -168,7 +177,7 @@ body {
   text-align: center;
   padding: 17px 48px;
   color: #fff;
-  background-color: #abddbd;
+  background-color: var(--mint-color);
   height: 48px;
   :hover {
     transform: scale(1.04);
@@ -196,7 +205,7 @@ body {
   text-align: center;
   padding: 17px 48px;
   color: #fff;
-  background-color: #abddbd;
+  background-color: var(--mint-color);
   height: 48px;
   :hover {
     transform: scale(1.04);
@@ -217,8 +226,8 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
-  color: rgb(214, 159, 207);
-  border: 1px solid rgb(133, 94, 63);
+  color: var(--strawberry-color);
+  border: 1px solid var(--chocolate-color);
   line-height: 26px;
 }
 .twenty-ten {
@@ -236,8 +245,8 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
-  color: rgb(231, 229, 203);
-  border: 1px solid rgb(133, 94, 63);
+  color: var(--vanilla-color);
+  border: 1px solid var(--border-color);
   line-height: 26px;
 }
 .twenty-eleven {
@@ -254,8 +263,8 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
-  color: rgb(179, 132, 89);
-  border: 1px solid rgb(133, 94, 63);
+  color: var(--chocolate-color);
+  border: 1px solid var(--border-color);
   line-height: 26px;
 }
 /* :root {
