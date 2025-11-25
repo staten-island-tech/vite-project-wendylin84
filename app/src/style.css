@@ -12,7 +12,7 @@ body,
   --strawberry-color: #d69fcf;
   --vanilla-color: #e7e5cb;
   --chocolate-color: #b38459;
-  --border-color: #855e3f;
+  --border-color: #b38459;
   --button-bg: #fff;
   --head-color: #86562e;
 }
@@ -34,11 +34,16 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+.niconne-regular {
+  font-family: "Niconne", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 .head {
   font-family: "Sirivennela", sans-serif;
   text-align: center;
   padding: 20px;
-  font-size: 90px;
+  font-size: 95px;
   color: var(--head-color);
   text-shadow: #fff1f1 3px 3px 5px;
   margin: 15px;
@@ -49,7 +54,7 @@ body {
   background-color: #ffffff;
   margin: 15px auto;
   border-radius: 20px;
-  border: 3px solid #d1b6db;
+  border: 3px solid #d7b6db;
 
   display: flex;
   flex-direction: column;
@@ -57,7 +62,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   transition: 0.3s;
-  box-shadow: 10px 8px 0px rgb(255, 236, 253);
+  box-shadow: 10px 8px 0px rgb(255, 255, 255);
 }
 .container {
   width: 100vw;
@@ -74,14 +79,20 @@ body {
   object-fit: cover;
 }
 .card-header {
-  font-size: 21px;
+  font-size: 33px;
   text-align: center;
   margin: 10px;
+  font-family: "Niconne";
+  font-weight: 100;
+  color: #d7b6db;
 }
 .card-info {
   font-size: 25px;
   margin: 10px;
   text-align: center;
+  font-family: "Shrikhand", serif;
+  font-weight: 100;
+  color: #523636;
 }
 .filter-buttons {
   display: flex;
@@ -118,7 +129,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 17px 48px;
-  color: #ffffff;
+  color: var(--button-bg);
   background-color: var(--mint-color);
   height: 48px;
   :hover {
@@ -147,7 +158,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 17px 48px;
-  color: #fff;
+  color: var(--button-bg);
   background-color: var(--mint-color);
   height: 48px;
   :hover {
@@ -176,7 +187,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 17px 48px;
-  color: #fff;
+  color: var(--button-bg);
   background-color: var(--mint-color);
   height: 48px;
   :hover {
@@ -204,7 +215,7 @@ body {
   font-weight: 700;
   text-align: center;
   padding: 17px 48px;
-  color: #fff;
+  color: var(--button-bg);
   background-color: var(--mint-color);
   height: 48px;
   :hover {
@@ -222,12 +233,12 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--button-bg);
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
   color: var(--strawberry-color);
-  border: 1px solid var(--chocolate-color);
+  border: 1px solid var(--border-color);
   line-height: 26px;
 }
 .twenty-ten {
@@ -241,7 +252,7 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--button-bg);
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
@@ -259,7 +270,7 @@ body {
   outline: 0;
   border: 0;
   cursor: pointer;
-  background-color: white;
+  background-color: var(--button-bg);
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
