@@ -177,10 +177,86 @@ function inject(songs) {
   container.insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
-    <h2 class="card-header">${songs.name}</h2>
       <img class="card-img" src="${songs.img}"/>
-      <button class="card-info">Know More</button>
     </div>`
   );
 }
 songs.forEach((songs) => inject(songs));
+
+function filterByCategory(category) {
+  let display = document.querySelector(".container");
+  display.innerHTML = "";
+  const filteredCategory = songs.filter((songs) => songs.category === category);
+  filteredCategory.forEach((songs) =>
+    display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="card">
+      <img class="card-img" src="${songs.img}"/>
+    </div>`
+    )
+  );
+}
+function filterByYear(year) {
+  let display = document.querySelector(".container");
+  display.innerHTML = "";
+  const filteredYear = songs.filter((songs) => songs.year === year);
+  filteredYear.forEach((songs) =>
+    display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="card">
+      <img class="card-img" src="${songs.img}"/>
+    </div>`
+    )
+  );
+}
+function filterTwentyNine(year) {
+  let display = document.querySelector(".container");
+  display.innerHTML = "";
+  const filteredYear = songs.filter(
+    (songs) => songs.year === year || songs.year < year
+  );
+  filteredYear.forEach((songs) =>
+    display.insertAdjacentHTML(
+      "afterbegin",
+      `<div class="card">
+      <img class="card-img" src="${songs.img}"/>
+    </div>`
+    )
+  );
+}
+
+function filterByButton() {
+  const buttons = document.querySelectorAll("button");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) =>
+    btn.addEventListener("click", function (event) {
+      if (btn.id === "lizzy-grant") {
+        filterByCategory("Lizzy Grant");
+      }
+      if (btn.id === "lana-rey") {
+        filterByCategory("Lana Rey");
+      }
+      if (btn.id === "lana-del-ray") {
+        filterByCategory("Lana Del Ray");
+      }
+      if (btn.id === "lana-del-rey") {
+        filterByCategory("Lana Del Rey");
+      }
+      if (btn.id === "twenty-nine-plus") {
+        filterTwentyNine(2009);
+      }
+      if (btn.id === "twenty-ten") {
+        filterByYear(2010);
+      }
+      if (btn.id === "twenty-eleven") {
+        filterByYear(2011);
+      }
+      if (btn.id === "no-filter") {
+        let display = document.querySelector(".container");
+        display.innerHTML = "";
+        songs.forEach((songs) => inject(songs));
+      }
+    })
+  );
+}
+filterByButton();

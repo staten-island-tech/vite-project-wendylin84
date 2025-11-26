@@ -49,12 +49,10 @@ body {
   margin: 15px;
 }
 .card {
-  width: 20vw;
-  height: 400px;
+  width: 18vw;
+  height: 18vw;
   background-color: #ffffff;
   margin: 15px auto;
-  border-radius: 20px;
-  border: 3px solid #d7b6db;
 
   display: flex;
   flex-direction: column;
@@ -62,7 +60,7 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   transition: 0.3s;
-  box-shadow: 10px 8px 0px rgb(255, 255, 255);
+  box-shadow: 10px 8px 0px rgb(107, 44, 44);
 }
 .container {
   width: 100vw;
@@ -74,9 +72,10 @@ body {
   flex-wrap: wrap;
 }
 .card-img {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   object-fit: cover;
+  margin-top: 24px;
 }
 .card-header {
   font-size: 33px;
@@ -263,6 +262,24 @@ body {
 .twenty-eleven {
   font-family: "Twinkle Star", cursive;
   font-size: 30px;
+  text-align: center;
+
+  margin-right: 10px;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: var(--button-bg);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: var(--chocolate-color);
+  border: 1px solid var(--border-color);
+  line-height: 26px;
+}
+.no-filter {
+  font-family: "Twinkle Star", cursive;
+  font-size: 30px;
   margin-right: auto;
   text-align: center;
 
@@ -274,7 +291,7 @@ body {
   border-radius: 4px;
   padding: 8px 16px;
   font-weight: 600;
-  color: var(--chocolate-color);
+  color: var(--mint-color);
   border: 1px solid var(--border-color);
   line-height: 26px;
 }
