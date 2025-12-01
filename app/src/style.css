@@ -295,7 +295,35 @@ body {
   border: 1px solid var(--border-color);
   line-height: 26px;
 }
-/* :root {
+#form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 50vh;
+  font-family: "Niconne", cursive;
+}
+.user-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+.text-box {
+  width: 650px;
+  height: 50px;
+  font-size: 25px;
+  font-family: "Niconne", cursive;
+}
+.form-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn,/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -391,4 +419,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
- */
+ */;

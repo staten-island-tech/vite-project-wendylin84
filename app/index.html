@@ -45,7 +45,31 @@
       <button class="no-filter" id="no-filter">All</button>
     </div>
     <div class="container"></div>
-    <form id="form"></form>
+    <section class="form-parent">
+      <form id="form">
+        <div class="form-inputs">
+          <div class="form-input">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="text-box" required />
+          </div>
+          <div class="form-input">
+            <label for="img">Enter Image URL Here</label>
+            <input type="text" id="img" class="text-box" required />
+          </div>
+          <div class="form-input">
+            <label for="category">Category</label>
+            <input type="text" id="category" class="text-box" required />
+          </div>
+          <div class="form-input">
+            <label for="year">Year</label>
+            <input type="text" id="year" class="text-box" required />
+          </div>
+        </div>
+        <div class="hero-form-input">
+          <input type="Upload" value="submit" class="btn" />
+        </div>
+      </form>
+    </section>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>

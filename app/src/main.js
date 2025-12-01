@@ -260,3 +260,15 @@ function filterByButton() {
   );
 }
 filterByButton();
+
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault(); // stops page from refreshing
+  let album = {
+    name: document.getElementById("name").value,
+    img: document.getElementById("img").value,
+    category: document.getElementById("category").value,
+    year: document.getElementById("year").value,
+  };
+  inject(album); // add to the page
+  clearFields(); // reset form inputs
+});
