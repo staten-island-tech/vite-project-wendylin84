@@ -172,12 +172,20 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter')) */
+const DOMSelectors = {
+  name: document.getElementById("name"),
+  img: document.getElementById("img"),
+  category: document.getElementById("category"),
+  year: document.getElementById("year"),
+};
+
 function inject(songs) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
       <img class="card-img" src="${songs.img}"/>
+      <button class="card-info" id="card-info">Know More</button>
     </div>`
   );
 }
@@ -192,6 +200,7 @@ function filterByCategory(category) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
+      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -205,6 +214,7 @@ function filterByYear(year) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
+      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -220,6 +230,7 @@ function filterTwentyNine(year) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
+      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -263,12 +274,19 @@ filterByButton();
 
 document.getElementById("form").addEventListener("submit", function (e) {
   e.preventDefault(); // stops page from refreshing
-  let album = {
-    name: document.getElementById("name").value,
-    img: document.getElementById("img").value,
-    category: document.getElementById("category").value,
-    year: document.getElementById("year").value,
-  };
+  let album = {};
+  album.name = document.getElementById("name").value;
+  album.img = document.getElementById("img").value;
+  album.category = document.getElementById("category").value;
+  album.year = document.getElementById("year").value;
+  console.log(album);
   inject(album); // add to the page
   clearFields(); // reset form inputs
 });
+
+function clearFields() {
+  DOMSelectors.name.value = "";
+  DOMSelectors.img.value = "";
+  DOMSelectors.category.value = "";
+  DOMSelectors.year.value = "";
+}
