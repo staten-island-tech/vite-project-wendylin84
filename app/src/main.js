@@ -148,7 +148,29 @@ const songs = [
     year: 2010,
   },
 ];
-
+const pics = [
+  "https://i.ibb.co/bMtNC5rb/artworks-7-Ct-T70h-PMy-N6s-Vs4-W3-A0-RQ-t500x500.jpg",
+  "https://i.ibb.co/v6JBgG09/artworks-1fm-Yj-Di-Pe3c-Ex-DBb-UXm-Eg-A-t500x500.jpg",
+  "https://i.ibb.co/MkCdx0K2/Every-Man-Gets-His-Wish-by-Lana-Del-Rey.jpg",
+  "https://i.ibb.co/wNgPfjZS/7944631498-f20faef67a-z.jpg",
+  "https://i.ibb.co/prnvydTh/artworks-xer-Qzo-TRXKV2ecw1-STV6v-Q-t500x500.jpg",
+  "https://i.ibb.co/SXh1DCw2/artworks-FQ9-YW3pf3ema-M6-Gz-589tbg-t1080x1080.jpg",
+  "https://i.ibb.co/fdFPW9bY/image.jpg",
+  "https://i.ibb.co/PZF9CmpJ/3e4cde9c-a1d6-48a7-8e2b-54fbaeb957c4.jpg",
+  "https://i.ibb.co/HLdFTdLS/2aced987de53ecf547bea414bef04c9e.jpg",
+  "https://i.ibb.co/GfMjycfF/image.jpg",
+  "https://i.ibb.co/xShB0sFd/2e662f4c-4fea-4ca9-bbfa-f6c82beb8540.jpg",
+  "https://i.ibb.co/cSmsnBxG/0b81a43d2ed1fa231f55d780b36e2950.jpg",
+  "https://i.ibb.co/yFTz5Q1Y/19840d058b308be578ae3691553d1cd8.jpg",
+  "https://i.ibb.co/RGR5dc0j/9a669983a70e148fd1af07d9ac12d950.jpg",
+  "https://i.ibb.co/rGCrDCn2/tumblr-mkapvp-VZK21qhic1oo1-500.jpg",
+  "https://i.ibb.co/39tVF3M3/Lana-Del-Rey-puppylove.jpg",
+  "https://i.ibb.co/MyRCnmLr/takemetoparis.jpg",
+  "https://i.ibb.co/Tqrp7B89/lana-del-rey.jpg",
+  "https://i.ibb.co/V088kqZK/e73eafcc-45ec-4e63-9fbb-896f140e0864.jpg",
+  "https://i.ibb.co/BHhpgX8y/Us-Against-The-World-Cover.jpg",
+  "https://i.ibb.co/Tq71Cdwr/download-1.jpg",
+];
 /* import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
@@ -290,3 +312,11 @@ function clearFields() {
   DOMSelectors.category.value = "";
   DOMSelectors.year.value = "";
 }
+
+const pic = document.querySelector(".box");
+function songOfDay() {
+  const randomIndex = Math.floor(Math.random() * pics.length);
+  const img = pics[randomIndex];
+  pic.style.backgroundImage = img;
+}
+setInterval(songOfDay, 1000);
