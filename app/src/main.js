@@ -313,10 +313,11 @@ function clearFields() {
   DOMSelectors.year.value = "";
 }
 
-const pic = document.querySelector(".box");
+setInterval(songOfDay, 3000);
+
 function songOfDay() {
+  const pic = document.querySelector(".box");
   const randomIndex = Math.floor(Math.random() * pics.length);
   const img = pics[randomIndex];
   pic.style.backgroundImage = img;
 }
-setInterval(songOfDay, 1000);
