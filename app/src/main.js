@@ -171,6 +171,7 @@ const pics = [
   "https://i.ibb.co/BHhpgX8y/Us-Against-The-World-Cover.jpg",
   "https://i.ibb.co/Tq71Cdwr/download-1.jpg",
 ];
+const images = [];
 /* import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
@@ -313,11 +314,33 @@ function clearFields() {
   DOMSelectors.year.value = "";
 }
 
+let index = 0;
+const imgElement = document.getElementById("slideshow");
+function songOfDay() {
+  index = (index + 1) % pics.length;
+  setTimeout(() => {
+    imgElement.src = pics[index];
+  }, 2000);
+}
 setInterval(songOfDay, 3000);
 
-function songOfDay() {
-  const pic = document.querySelector(".box");
-  const randomIndex = Math.floor(Math.random() * pics.length);
-  const img = pics[randomIndex];
-  pic.style.backgroundImage = img;
-}
+const container = document.getElementById("container");
+// Create images, store them in the array, and add event listeners
+imageSources.forEach((src, index) => {
+  const img = document.createElement("img");
+  img.src = src;
+  img.alt = `Image ${index + 1}`;
+  img.style.margin = "10px";
+  img.style.cursor = "pointer";
+
+  // Add click event listener
+  img.addEventListener("click", () => {
+    alert(`You clicked on ${img.alt}`);
+  });
+
+  // Store in array
+  images.push(img);
+
+  // Append to DOM
+  container.appendChild(img);
+});
