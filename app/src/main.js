@@ -171,7 +171,6 @@ const pics = [
   "https://i.ibb.co/BHhpgX8y/Us-Against-The-World-Cover.jpg",
   "https://i.ibb.co/Tq71Cdwr/download-1.jpg",
 ];
-const images = [];
 /* import javascriptLogo from './javascript.svg'
 import viteLogo from '/vite.svg'
 import { setupCounter } from './counter.js'
@@ -208,9 +207,19 @@ function inject(songs) {
     "afterbegin",
     `<div class="card">
       <img class="card-img" src="${songs.img}"/>
-      <button class="card-info" id="card-info">Know More</button>
     </div>`
   );
+
+  const modal = document.querySelector(".modal");
+  const modalimg = document.querySelector(".modalimg");
+  const artimage = document.querySelector(".card .card-img");
+  artimage.addEventListener("click", () => {
+    modalimg.src = songs.img;
+    modal.style.display = "flex";
+  });
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
 }
 songs.forEach((songs) => inject(songs));
 
@@ -223,7 +232,6 @@ function filterByCategory(category) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
-      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -237,7 +245,6 @@ function filterByYear(year) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
-      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -253,7 +260,6 @@ function filterTwentyNine(year) {
       "afterbegin",
       `<div class="card">
       <img class="card-img" src="${songs.img}"/>
-      <button class="card-info" id="card-info">Know More</button>
     </div>`
     )
   );
@@ -303,6 +309,7 @@ document.getElementById("form").addEventListener("submit", function (e) {
   album.category = document.getElementById("category").value;
   album.year = document.getElementById("year").value;
   console.log(album);
+  songs.push(album);
   inject(album); // add to the page
   clearFields(); // reset form inputs
 });
@@ -320,27 +327,6 @@ function songOfDay() {
   index = (index + 1) % pics.length;
   setTimeout(() => {
     imgElement.src = pics[index];
-  }, 2000);
+  }, 10000);
 }
-setInterval(songOfDay, 3000);
-
-const container = document.getElementById("container");
-// Create images, store them in the array, and add event listeners
-imageSources.forEach((src, index) => {
-  const img = document.createElement("img");
-  img.src = src;
-  img.alt = `Image ${index + 1}`;
-  img.style.margin = "10px";
-  img.style.cursor = "pointer";
-
-  // Add click event listener
-  img.addEventListener("click", () => {
-    alert(`You clicked on ${img.alt}`);
-  });
-
-  // Store in array
-  images.push(img);
-
-  // Append to DOM
-  container.appendChild(img);
-});
+setInterval(songOfDay, 10000);
