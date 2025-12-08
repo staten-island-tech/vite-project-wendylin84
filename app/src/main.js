@@ -171,35 +171,25 @@ const pics = [
   "https://i.ibb.co/BHhpgX8y/Us-Against-The-World-Cover.jpg",
   "https://i.ibb.co/Tq71Cdwr/download-1.jpg",
 ];
-/* import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
-
-setupCounter(document.querySelector('#counter')) */
 const DOMSelectors = {
   name: document.getElementById("name"),
   img: document.getElementById("img"),
   category: document.getElementById("category"),
   year: document.getElementById("year"),
 };
+
+function testModal(songs) {
+  const modal = document.querySelector(".modal");
+  const modalimg = document.querySelector(".modalimg");
+  const songimage = document.querySelector(".card .card-img");
+  songimage.addEventListener("click", () => {
+    modalimg.src = songs.img;
+    modal.style.display = "flex";
+  });
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+}
 
 function inject(songs) {
   const container = document.querySelector(".container");
@@ -209,17 +199,7 @@ function inject(songs) {
       <img class="card-img" src="${songs.img}"/>
     </div>`
   );
-
-  const modal = document.querySelector(".modal");
-  const modalimg = document.querySelector(".modalimg");
-  const artimage = document.querySelector(".card .card-img");
-  artimage.addEventListener("click", () => {
-    modalimg.src = songs.img;
-    modal.style.display = "flex";
-  });
-  modal.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+  testModal(songs);
 }
 songs.forEach((songs) => inject(songs));
 
@@ -235,6 +215,7 @@ function filterByCategory(category) {
     </div>`
     )
   );
+  testModal(songs);
 }
 function filterByYear(year) {
   let display = document.querySelector(".container");

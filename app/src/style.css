@@ -158,7 +158,6 @@ body {
 }
 .lana-del-ray {
   font-family: "Twinkle Star", cursive;
-  margin-left: 10px;
   margin-right: 10px;
   overflow-y: hidden;
   display: inline-block;
@@ -297,6 +296,7 @@ body {
 }
 .form-input {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: left;
@@ -318,7 +318,6 @@ body {
   justify-content: center;
   width: auto;
   height: 350px;
-  border-radius: 20px;
   border: 1px solid var(--border-color);
   margin: 20px;
   background-position: center;
@@ -350,9 +349,11 @@ h2 {
   display: none;
   justify-content: center;
   align-items: center;
+  background-color: #abdddb;
+  margin: 20px;
 }
 .modalimg {
-  width: 90%;
+  width: 30%;
   border-radius: 10px;
 }
 
