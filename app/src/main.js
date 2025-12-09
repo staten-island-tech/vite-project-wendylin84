@@ -229,6 +229,7 @@ function filterByYear(year) {
     </div>`
     )
   );
+  testModal(songs);
 }
 function filterTwentyNine(year) {
   let display = document.querySelector(".container");
@@ -244,6 +245,7 @@ function filterTwentyNine(year) {
     </div>`
     )
   );
+  testModal(songs);
 }
 
 function filterByButton() {

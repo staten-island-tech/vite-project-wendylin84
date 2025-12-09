@@ -354,13 +354,12 @@ h2 {
 }
 .modalimg {
   width: 30%;
-  border-radius: 10px;
 }
 
 @media screen and (max-width: 800px) {
   .card {
-    width: 60%;
-    height: auto;
+    width: 280px;
+    height: 280px;
   }
   .container {
     flex-direction: row;
@@ -370,20 +369,49 @@ h2 {
     margin: auto;
     justify-content: space-around;
   }
-  .filter-buttons {
-    display: flex;
+  .card-img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+  .box {
     flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     padding: 10px;
     margin: auto;
+    justify-content: space-around;
+  }
+  .modalimg {
+    width: 60%;
+  }
+  .hero-form-input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .slideshow {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: auto;
+    justify-content: space-around;
+    width: 280px;
+    height: 280px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .card {
-    width: 60%;
-    height: 60%;
+    width: 280px;
+    height: 280px;
+  }
+  .card-img {
+    width: auto;
+    height: auto;
+    object-fit: cover;
   }
   .container {
     flex-direction: row;
@@ -393,13 +421,28 @@ h2 {
     margin: auto;
     justify-content: space-around;
   }
-  .filter-buttons {
-    display: flex;
+  .modalimg {
+    width: 60%;
+  }
+  h2 {
+    margin: auto;
+  }
+  .slideshow {
     flex-direction: row;
+    display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
     padding: 10px;
     margin: auto;
+    justify-content: space-around;
+    width: 280px;
+    height: 280px;
+  }
+  .form-input {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
   }
 }
 .card:hover {
