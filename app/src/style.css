@@ -401,6 +401,9 @@ h2 {
     width: 280px;
     height: 280px;
   }
+  .text-box {
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -421,6 +424,7 @@ h2 {
     margin: auto;
     justify-content: space-around;
   }
+
   .modalimg {
     width: 60%;
   }
@@ -437,12 +441,8 @@ h2 {
     width: 280px;
     height: 280px;
   }
-  .form-input {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: left;
+  .text-box {
+    width: auto;
   }
 }
 .card:hover {

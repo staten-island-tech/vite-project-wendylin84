@@ -190,7 +190,6 @@ function testModal(songs) {
     modal.style.display = "none";
   });
 }
-
 function inject(songs) {
   const container = document.querySelector(".container");
   container.insertAdjacentHTML(
@@ -215,8 +214,8 @@ function filterByCategory(category) {
     </div>`
     )
   );
-  testModal(songs);
 }
+
 function filterByYear(year) {
   let display = document.querySelector(".container");
   display.innerHTML = "";
@@ -229,7 +228,6 @@ function filterByYear(year) {
     </div>`
     )
   );
-  testModal(songs);
 }
 function filterTwentyNine(year) {
   let display = document.querySelector(".container");
@@ -245,7 +243,6 @@ function filterTwentyNine(year) {
     </div>`
     )
   );
-  testModal(songs);
 }
 
 function filterByButton() {
@@ -255,6 +252,7 @@ function filterByButton() {
     btn.addEventListener("click", function (event) {
       if (btn.id === "lizzy-grant") {
         filterByCategory("Lizzy Grant");
+        songs.forEach((songs) => testModal(songs));
       }
       if (btn.id === "lana-rey") {
         filterByCategory("Lana Rey");
