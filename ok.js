@@ -1,0 +1,18 @@
+async function getData(poke) {
+  try {
+    // get data from API
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${poke}`);
+    if (response.status != 200) {
+      throw new Error(response);
+    } else {
+      //converst responseinto json we can use
+      const data = await response.json();
+      document.getElementById("api-response").textContent = data.name;
+      /*     console.log(data); */
+    }
+  } catch (error) {
+    console.log(error);
+  }
+}
+getData("pikachu");
+daisyui;
