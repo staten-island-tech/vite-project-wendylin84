@@ -177,11 +177,44 @@ const DOMSelectors = {
   category: document.getElementById("category"),
   year: document.getElementById("year"),
 };
-
-function testModal(songs) {
+/* function testModal() {
   const modal = document.querySelector(".modal");
   const modalimg = document.querySelector(".modalimg");
-  const songimage = document.querySelector(".card .card-img");
+  const songimage = document.querySelector(".card-img");
+  const name = document.querySelector(".name");
+  const year = document.querySelector(".year");
+  const category = document.querySelector(".category");
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", () => {
+      modalimg.src = card.querySelector("img").src;
+      name.textContent = card.querySelector("h2").textContent;
+      category.textContent = card.querySelector("h3").textContent;
+      year.textContent = card.querySelector("p").textContent;
+      modalimg.src = songs.img;
+      modal.style.display = "flex";
+
+      modal.classList.add("show");
+      songimage.addEventListener("click", () => {
+        modalimg.src = songs.img;
+        modal.style.display = "flex";
+      });
+    });
+  });
+  modal.addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+} */
+function inject(songs) {
+  const container = document.querySelector(".container");
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card" data-img="${songs.img}">
+      <img class="card-img" src="${songs.img}"/>
+    </div>`
+  );
+  const modal = document.querySelector(".modal");
+  const modalimg = document.querySelector(".modalimg");
+  const songimage = document.querySelector(".card-img");
   songimage.addEventListener("click", () => {
     modalimg.src = songs.img;
     modal.style.display = "flex";
@@ -190,17 +223,21 @@ function testModal(songs) {
     modal.style.display = "none";
   });
 }
-function inject(songs) {
-  const container = document.querySelector(".container");
-  container.insertAdjacentHTML(
-    "afterbegin",
-    `<div class="card">
-      <img class="card-img" src="${songs.img}"/>
-    </div>`
-  );
-  testModal(songs);
-}
 songs.forEach((songs) => inject(songs));
+
+const container = document.getElementById("container");
+container.addEventListener("click", (e) => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+
+  openModal(card);
+});
+
+function openModal(card) {
+  modal.style.display = "flex";
+  const img = card.dataset.img;
+  modalimg.src = img;
+}
 
 function filterByCategory(category) {
   let display = document.querySelector(".container");
@@ -301,10 +338,25 @@ function clearFields() {
   DOMSelectors.category.value = "";
   DOMSelectors.year.value = "";
 }
+document.querySelector(".color-change").addEventListener("click", function () {
+  const body = document.body;
+  if (body.classList.contains("cool")) {
+    body.classList.add("warm");
+    body.classList.remove("cool");
+  } else {
+    body.classList.remove("warm");
+    body.classList.add("cool");
+  }
+  console.log(body.classList);
+});
 
 let index = 0;
 const imgElement = document.getElementById("slideshow");
 function songOfDay() {
+  /*  const index = Math.floor(Math.random() * pics.length);
+  const songArt = pics[index];
+  imgElement.src = songArt.img;
+ */
   index = (index + 1) % pics.length;
   setTimeout(() => {
     imgElement.src = pics[index];
